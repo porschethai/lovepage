@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เป็นแฟนกันนะ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffecf2;
+            margin: 0;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6699;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .yes {
+            background-color: #ff6699;
+            color: white;
+        }
+        .no {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1> พิมพ์เป็นแฟนกับเรานะ 💖</h1>
+    <p>ถ้าเลือก "ไม่เอา" ปุ่มจะหนีไปนะ 😆</p>
+    <button class="btn yes" onclick="alert('เย้! รักนะ 💕')">ตกลง</button>
+    <button class="btn no" id="noButton">ไม่เอา</button>
+
+    <script>
+        document.getElementById('noButton').addEventListener('mouseover', function() {
+            var x = Math.random() * (window.innerWidth - 100);
+            var y = Math.random() * (window.innerHeight - 50);
+            this.style.left = x + 'px';
+            this.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>
